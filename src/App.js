@@ -1,12 +1,17 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { Button } from "@material-tailwind/react";
+import Pages from "./Components/Pages/Pages";
+import { BrowserRouter } from "react-router-dom";
+import AppContext from "./Components/AppContext/AppContext";
 
 function App() {
   return (
-    <div className="App">
-      <Button>Button</Button>
-    </div>
+    <h1 className="App">
+      <BrowserRouter>
+        <AppContext>
+          <Pages></Pages>
+        </AppContext>
+      </BrowserRouter>
+    </h1>
   );
 }
 
